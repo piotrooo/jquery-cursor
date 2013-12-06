@@ -24,9 +24,6 @@
         "select",
         "textarea",
         "text",
-        "plugin",
-        "set cursor",
-        "set at the end",
-        "select range"
+        "plugin"
     ]
 }
