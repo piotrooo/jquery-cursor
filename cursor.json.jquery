@@ -1,0 +1,32 @@
+{
+    "name": "cursor",
+    "version": "1.0.0",
+    "title": "jQuery cursor",
+    "author": {
+        "name": "Piotr Olaszewski",
+        "url": "http://softol.pl"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.6"
+    },
+    "description": "jQuery plugin to manipulating cursor inside text and textarea fields",
+    "keywords": [
+        "jquery",
+        "cursor",
+        "range",
+        "widget",
+        "select",
+        "textarea",
+        "text",
+        "plugin",
+        "set cursor",
+        "set at the end",
+        "select range"
+    ]
+}
