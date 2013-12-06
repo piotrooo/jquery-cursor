@@ -1,7 +1,7 @@
 jQuery cursor
 =============
 
-jQuery plugin to manipultaing cursor inside text and textarea fields
+jQuery plugin to manipulating cursor inside text and textarea fields
 
 Usage
 -----
