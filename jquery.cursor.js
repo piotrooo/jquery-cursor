@@ -8,7 +8,7 @@
 (function ($) {
     $.fn.setAtTheBegin = function () {
         return this.each(function () {
-            this.setSelectionRange(0, 0);
+            _cursorSetSelectionRange(this, 0, 0);
         });
     };
 
@@ -16,7 +16,7 @@
         return this.each(function () {
             var _this = $(this);
             var len = _this.val().length;
-            this.setSelectionRange(len, len);
+            _cursorSetSelectionRange(this, len, len);
         });
     };
 
@@ -26,13 +26,24 @@
         }
 
         return this.each(function () {
-            this.setSelectionRange(begin, end);
+            _cursorSetSelectionRange(this, begin, end);
         });
     };
 
     $.fn.setAtThePosition = function (position) {
         return this.each(function () {
-            this.setSelectionRange(position, position);
+            _cursorSetSelectionRange(this, position, position);
         });
     };
+
+    function _cursorSetSelectionRange(input, start, end) {
+        if (input.setSelectionRange) {
+            input.setSelectionRange(start, end);
+        } else if (input.createTextRange) {
+            var range = input.createTextRange();
+            range.moveStart('character', start);
+            range.moveEnd('character', end);
+            range.select();
+        }
+    }
 })(jQuery);
